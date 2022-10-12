@@ -21,7 +21,7 @@ Feature: Title of your feature
   I want to use this template for my feature file
 	
   Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    Then I validate the outcomes
+    Given User is in GreenKart landing page
+    When User searches with shortname "Tom" and extract the actual name of product
+    Then User searched with shortname "Tom" in offers page to check if product exist
+		Then Validates prodcut name matches in both pages
