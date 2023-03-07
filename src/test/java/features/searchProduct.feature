@@ -17,11 +17,10 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Search and place the order for products
 	
-  Scenario: Title of your scenario
+  Scenario: Search experience
     Given User is in GreenKart landing page
     When User searches with shortname "Tom" and extract the actual name of product
-    Then User searched with shortname "Tom" in offers page to check if product exist
-		Then Validates prodcut name matches in both pages
+    Then User searched with "Tom" shortname in offers page to check if product exist
+		And Validates prodcut name matches in both pages
