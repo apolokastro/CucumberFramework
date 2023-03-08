@@ -17,10 +17,6 @@ public class OffersPage {
 		driver.findElement(searchBar).sendKeys(shortName);
 	}
 	
-	public void getSearchText() {
-		driver.findElement(searchBar).getText();
-	}
-	
 	public String getProductName() {
 		return driver.findElement(productName).getText();
 	}

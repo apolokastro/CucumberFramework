@@ -3,10 +3,10 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LandingPage {
+public class GreenKartPage {
 	WebDriver driver;
 	
-	public LandingPage(WebDriver driver) {
+	public GreenKartPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -14,12 +14,8 @@ public class LandingPage {
 	private By productName = By.cssSelector("h4.product-name");
 	private By lnkTopDals = By.linkText("Top Deals");
 	
-	public void searhcItem(String shortName) {
-		driver.findElement(searchBar).sendKeys(shortName);
-	}
-	
-	public void getSearchText() {
-		driver.findElement(searchBar).getText();
+	public void searhcItem(String product) {
+		driver.findElement(searchBar).sendKeys(product);
 	}
 	
 	public String getProductName() {
