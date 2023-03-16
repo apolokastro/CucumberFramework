@@ -16,7 +16,7 @@ public class GreenKart {
 		
 	}
 	
-	@When("User searches with shortname {string} and extract the actual name of product")
+	@When("^User searches with shortname (.+) and extract the actual name of product$")
 	public void user_searches_with_shortname_and_extract_the_actual_name_of_product(String product) throws InterruptedException {
 		GreenKartPage gp = tcs.pageObjectManager.getGreenKartPage();
 		gp.searhcItem(product);

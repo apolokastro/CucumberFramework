@@ -15,7 +15,7 @@ public class Offers {
 		this.tcs = tcs;
 	}
 	
-	@Then("User searched with {string} shortname in offers page to check if product exist")
+	@Then("^User searched with (.+) shortname in offers page to check if product exist$")
 	public void user_searched_with_shortname_in_offers_page_to_check_if_product_exist(String product) throws InterruptedException {
 		switchToOffersPage();
 		OffersPage op = tcs.pageObjectManager.getOffersPage();
@@ -28,7 +28,6 @@ public class Offers {
 	@Then("Validates prodcut name matches in both pages")
 	public void validates_prodcut_name_matches_in_both_pages() {
 		Assert.assertEquals(tcs.firstProductName, tcs.secondProductName);
-		tcs.pageObjectManager.driver.quit();
 	}
 
 	public void switchToOffersPage() {

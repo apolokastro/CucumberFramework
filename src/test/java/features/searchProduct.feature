@@ -19,8 +19,13 @@
 
 Feature: Search and place the order for products
 	
-  Scenario: Search experience
+  Scenario Outline: Search experience
     Given User is in GreenKart landing page
-    When User searches with shortname "Tom" and extract the actual name of product
-    Then User searched with "Tom" shortname in offers page to check if product exist
+    When User searches with shortname <Item> and extract the actual name of product
+    Then User searched with <Item> shortname in offers page to check if product exist
 		And Validates prodcut name matches in both pages
+		
+	Examples:
+	|Item|
+	|Tom|
+	|Stra|
