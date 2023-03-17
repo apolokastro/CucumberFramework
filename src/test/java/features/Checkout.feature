@@ -17,15 +17,16 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-Feature: Search and place the order for products
+Feature: Place order for products
 	
-	@Offer
+	@Order
   Scenario Outline: Search experience
     Given User is in GreenKart landing page
     When User searches with shortname <Item> and extract the actual name of product
-    Then User searched with <Item> shortname in offers page to check if product exist
-		And Validates prodcut name matches in both pages
-		
+    And User added "3" itemes of the selected products to cart
+    Then User proceeds to Checkout and validate <Item> items in checkout page
+    And User verify has ability to enter promo code and place the order
+				
 	Examples:
 	|Item|
 	|Tom|

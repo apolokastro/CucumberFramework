@@ -19,6 +19,7 @@
 
 Feature: Search and place the order for products
 	
+	@Offer
   Scenario Outline: Search experience
     Given User is in GreenKart landing page
     When User searches with shortname <Item> and extract the actual name of product
